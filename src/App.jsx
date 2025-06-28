@@ -1,10 +1,9 @@
 import React from "react";
 import User from "./Dela";
-import Button from "./Button";
-import s from "./app.module.css";
+
 function App() {
   return (
-    <div className={s.heading}>
+    <div className="border-2 border-red-500">
       <User name="Dela" age={24}/>
       <User name="sesa"/>
       
