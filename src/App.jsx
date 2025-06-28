@@ -1,13 +1,15 @@
-import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
+import HotelCard from "./HotelCard";
 
 function App() {
   return (
-    <div className="border-2 border-black">
-      <Button>Click Me</Button>
-      <Switch />
-
-      
+    <div className="py-5 border-2 border-black">
+      <HotelCard
+        name="Montmartre Majestry Hotel"
+        location="Paris, France"
+        rating={4.7}
+        reviews={["K", "L"]}
+        price={160}
+      />
     </div>
   );
 }
