@@ -1,22 +1,19 @@
 import HotelCard from "./HotelCard";
-
+import { hotels } from "./data";
 function App() {
   return (
     <div className="py-5 border-2 border-black">
-      <HotelCard
-        name="Montmartre Majestry Hotel"
-        location="Paris, France"
-        rating={4.7}
-        reviews={["K", "L"]}
-        price={160}
-      />
-      <HotelCard
-        name="Opulent River Face Hotel"
-        location="Paris, France"
-        rating={4.7}
-        reviews={["K", "L"]}
-        price={160}
-      />
+      {hotels.map((hotel, i) => {
+        return (
+          <HotelCard
+            name={hotel.name}
+            Location={hotel.location}
+            rating={hotel.rating}
+            reviews={hotel.reviews}
+            price={hotel.price}
+          />
+        );
+      })}
     </div>
   );
 }
