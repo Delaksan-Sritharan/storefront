@@ -10,6 +10,13 @@ function App() {
         reviews={["K", "L"]}
         price={160}
       />
+      <HotelCard
+        name="Opulent River Face Hotel"
+        location="Paris, France"
+        rating={4.7}
+        reviews={["K", "L"]}
+        price={160}
+      />
     </div>
   );
 }
