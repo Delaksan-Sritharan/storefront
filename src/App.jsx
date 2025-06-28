@@ -1,16 +1,14 @@
 import React from "react";
-import Dela from "./Dela";
+import User from "./Dela";
 import Button from "./Button";
-
+import s from "./app.module.css";
 function App() {
   return (
-    <>
-      <Dela name="Dela"/>
-      <Dela name="sesa"/>
-      <Button />
-      <Button />
-      <Button />
-    </>
+    <div className={s.heading}>
+      <User name="Dela" age={24}/>
+      <User name="sesa"/>
+      
+    </div>
   );
 }
 
