@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import RootLayout from "./layouts/root-layout.page.jsx";
+import RootLayout from "./components/layouts/root-layout.page";
 import HomePage from "./pages/home.page.jsx";
 import HotelDetailsPage from "./pages/hotel-details.page.jsx";
 import HotelsPage from "./pages/hotels.page.jsx";
@@ -12,13 +12,13 @@ import SignUpPage from "./pages/sign-up.page.jsx";
 import { Provider } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router";
 import { store } from "./lib/store";
-import AdminProtectLayout from "./layouts/admin-protect.layout.jsx";
+import AdminProtectLayout from "./components/layouts/admin-protect.layout";
 import CreateHotelPage from "./pages/admin/create-hotel.page.jsx";
 
 import { ClerkProvider } from "@clerk/clerk-react";
 
 import "./index.css";
-import ProtectLayout from "./layouts/protect.layout.jsx";
+import ProtectLayout from "./components/layouts/protect.layout";
 
 const clerkPublishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 if (!clerkPublishableKey) {
