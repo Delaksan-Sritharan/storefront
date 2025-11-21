@@ -1,18 +1,24 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
-import { useAddReviewMutation, useGetHotelByIdQuery } from "@/lib/api";
-import { useUser } from "@clerk/clerk-react";
-import { Building2, Coffee, MapPin, PlusCircle, Star, Tv, Wifi } from "lucide-react";
 import { useParams } from "react-router";
+import { Badge } from "../components/ui/badge";
+import { Button } from "../components/ui/button";
+import { MapPin } from "lucide-react";
+import { Star } from "lucide-react";
+import { Wifi } from "lucide-react";
+import { Building2 } from "lucide-react";
+import { Tv } from "lucide-react";
+import { Coffee } from "lucide-react";
+import { PlusCircle } from "lucide-react";
+import { Card,CardContent } from "@/components/ui/card";
+import { useGetHotelByIdQuery, useAddReviewMutation } from "@/lib/api";
+import { Skeleton } from "@/components/ui/skeleton";
+
 
 const HotelDetailsPage = () => {
   const { _id } = useParams();
   const { data: hotel, isLoading, isError, error } = useGetHotelByIdQuery(_id);
   const [addReview, { isLoading: isAddReviewLoading }] = useAddReviewMutation();
 
-  const { user } = useUser();
+  // const { user } = useUser();
 
   const handleAddReview = async () => {
     try {

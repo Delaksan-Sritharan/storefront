@@ -100,8 +100,8 @@ export const api = createApi({
 export const {
     useGetAllHotelsQuery,
     useGetHotelByIdQuery,
-    useCreateHotelMutation,
     useAddLocationMutation,
     useGetAllLocationsQuery,
     useAddReviewMutation,
+    useCreateHotelMutation,
 } = api;
